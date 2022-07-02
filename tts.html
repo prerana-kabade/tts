@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Text to Speech - Plugin</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .speak-area {
+      border: 1px solid #ccc;
+      padding: 5px;
+      float: left;
+      width: 50%;
+    }
+
+    .speak-area h1 {
+      float: left;
+      padding-right: 5px;
+      font-size: 18px;
+    }
+
+    .speak-area .speakTxt {
+      display: inline-block;
+      background: #000;
+
+      border-radius: 100%;
+    }
+
+    .speak-area .speakTxt.active {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    .speak-area svg {
+      padding: 5px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="speak-area">
+      <h1>what is your name?</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>Tell me about yourself</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>which domain?</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>what do u mean by cyber security</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>what is hadoop framework</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>what is big data analysis</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>what are analytics tool</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>who are netizens?</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>Text 9</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="speak-area">
+      <h1>Text 10</h1>
+      <a href="javascript:;" class="speakTxt">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.039"
+          height="22.822" viewBox="0 0 28.039 22.822">
+          <image id="speaker-filled-audio-tool" width="28.039" height="22.822"
+            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAjCAYAAAANDvOtAAAABHNCSVQICAgIfAhkiAAAA+dJREFUWEfNmGmoTVEUx92QzDMZ4n0wZgoZylBkzvAMH3hJEcos8/TJPMYzJnNIyTyEUKY8MoS8SJQvvJJLHr49w/9/O+e2rPYZ9nlH965a3bPXXWud39lnn7WHRElyRJkskTxwtIDuhRaZmBJZArsYcOsdwK/4bQX9pIHjhK2P5AOhj6CvLN/Wb/gnRMwbXLf8X7A9kfgytJpzg3b4fWkBfBO+fZX/TrRnSVscPTvVGWcy72Y0FlrA1oYve7OWiumM9lPXVlrY7frpncQb8ctxaCMd4PxMBbxFu3kcsOeQxKuUrMF/K2xIHd9N+F2g4niPC7RF6dkcxF2EtvWB8YJdjpih0LvQRR7xrAJ1xX+vcd06Cmw/5ykrBvSaCXY2YvJF3DpcLzPkmQDbEWXvgfZ9m56diYAdIV+tCdb0xbPH2HNavsBQUxgP4HpyWNh9dA4JSjcT7CDYr6gcj9HuYsjLCUJ+oEkODRe2LBp1nKA/Irg6rg9B+RpsxGvM7kKS6SpRH7RvKVt7tJ8rW3fCcsBzPq5ngC1vQyh8vWDLwYfTaRXhewPX/Q33+QBbQ2GfT9gfMFSOCOUV5le6ViFIljW+SU4KfAgpJ9AYKwzHCFsCA4dBnOIHyzlff1TDYWM5lMIyt1oYCghbDEPVOEmRK2hS0K94CWI2KIbxaB8VtneZgr0OCNZsV1gSWYelDEDjmjAkMwV7ChCjBQgrziQF2xvt28L2PVOwel2xH1BTFCx7nm/AleJMwT4BQScBwklgqYIdhfZpYSvKROmqBABOpxUECNfEnCWlzECDC3BXCgkrZyzlH7npVw1Yps6rzFzLvlA2LnrkR3eVsH7r0qi0frB3kLSXSPwR140MN3oIW1dh30JYToEroXJqo88vaA0ox46teMF2Q6IHKtlatDkBSOGa5DOUbK7khVl1jYH3SajcfQbBm2C5HiiENhHB3NUSjFO+FJ4hHFe2BmFgGdMGegmaE0Tp/G+CZV1lfZXCCuCeF0i7HiocEqlVV8j7pxY7HN9y5vGKNcHy4EKeJ3DKbWxI0BS298o+F+18G1g3fhsu5gQ8odeYHYI4bmd+QvmqNRTTnoGOFPlZrbhr+BYFlnm4a9B1UfIHLWS8nrUj/kifEzhOvA/rcKTdrXsj9hKHhWmBbvrCA15G6m8edKTPCZwAljWWt1LBMr4ZlOtQjkcpW9GYF4ZO+OzG9TQVw3OE9JY96jCQOblwJ/BgYeQ+a48FbC58zyp/1ll5flDqnpX5eb41DFoA5ZjmDiSsHITjROXMWe6etMXRs2GB/Pw4rbKWusJtOM/L/pFsgSUUl4zjoJzlDpue7C8dGAAHy3+bNgAAAABJRU5ErkJggg==" />
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- partial -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $('.speakTxt').on("click", function () {
+      $('.speakTxt').removeClass('active')
+      var texttoread = $(this).parent('.speak-area').find('h1').text();
+      $(this).toggleClass('active')
+      console.log(texttoread);
+      var speech = new SpeechSynthesisUtterance();
+      // Set the text and voice attributes.
+      speech.text = texttoread;
+      speech.volume = 1;
+      speech.rate = 1;
+      speech.pitch = 1;
+
+      window.speechSynthesis.speak(speech);
+    });
+  </script>
+
+</body>
+
+</html>
